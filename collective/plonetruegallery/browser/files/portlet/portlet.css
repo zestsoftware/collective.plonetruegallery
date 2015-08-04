@@ -9,6 +9,12 @@ dl.applied-portlet-gallery{
 dl.applied-portlet-gallery dd.portletItem{
     padding:0;
     margin:0;
+    text-align: center;
+}
+
+dl.appliet-portlet-gallery dd.portletItem a img{
+    display: block;
+    margin: 0 auto;
 }
 
 dl.applied-portlet-gallery div.gallery-portlet-controls{
