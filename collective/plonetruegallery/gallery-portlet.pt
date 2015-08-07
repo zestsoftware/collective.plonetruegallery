@@ -1,4 +1,4 @@
-<tal:defs tal:define="height view/data/height|nothing;
+<tal:defs tal:define="width view/data/width|nothing;
                       mini view/data/mini|nothing;
                       mini python: mini == None and True or mini">
 <dl class="portlet portletGallery"
@@ -37,8 +37,8 @@
             <img tal:attributes="src image/image_url;
                                  title image/title; 
                                  alt image/description;
-                                 width string:${view/data/width}px;
-                                 height python: height and str(height) + 'px' or '';"
+                                 height string:${view/data/height}px;
+                                 width python: width and str(width) + 'px' or '';"
              />
         </a>
     </dd>
