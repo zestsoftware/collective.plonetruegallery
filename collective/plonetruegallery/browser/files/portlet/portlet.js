@@ -17,8 +17,8 @@
     };
     
     function set_controls_position(container){
-        var width = container.find('img').width();
-        var left = (width/2) - 43;
+        var width = container.find('.portletItem').width();
+        var left = (width/2) - 47;
         container.find('div.gallery-portlet-controls').css("left", left);
     }
     
@@ -44,7 +44,6 @@
                 //create new image now so it'll be done loading faster...
                 var newimg = document.createElement('img');
                 newimg.src = json.src;
-                newimg.width = img.width();
                 if(img.attr('height') !== undefined){
                     newimg.height = img.height();
                 }
@@ -56,7 +55,6 @@
                     img.replaceWith(newimg);
                     
                     newimg.imagesLoaded(function(){
-                        portlet_item.animate({ height : $(this).height() }, 500, 'linear');
                         $(this).fadeIn(1000, function(){
                             linkele.active = false;
                         });
